@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap");
+
+/* font-family: 'Jost', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+/* font-family: 'Montserrat', sans-serif; */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden  !important;
+}
+
+::selection {
+  color: #fff;
+  background-color: #ff3939;
+}
+
+html {
+  &::-webkit-scrollbar {
+    width: 18px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(#000, gray);
+    border-radius: 10px;
+    height: 200px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: linear-gradient(gray, #000);
+      border-radius: 10px;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #3d3d3d;
+  }
+}
