@@ -1,15 +1,23 @@
-//  Start Jquery
-$(document).ready(function () {
-  // // Change BG-NavBar On Scroll
-  $(window).scroll(() => {
-    let scroll_top = $(window).scrollTop();
-    if (scroll_top > 10) {
-      $(".mynavbar").addClass("mynavbar2");
-    } else {
-      $(".mynavbar").removeClass("mynavbar2");
-    }
+//  ==================================== Start JS ====================================
+
+// // Change BG-NavBar On Scroll
+
+let mynavbar = document.querySelector(".mynavbar");
+let body = document.querySelector(".body");
+
+window.addEventListener("scroll", () => {
+  mynavbar.classList.toggle("mynavbar2", scrollY > 0);
+  
+});
+
+//  ==================================== Start Jquery ====================================
+// Loading Page Befor Load Main Page
+  $(window).on("load", function () {
+    $(".loader").fadeOut("2000");
+    $(".content").fadeIn("2000");
   });
 
+$(document).ready(function () {
   // Change Scroll Up On Scroll
   $(window).scroll(function () {
     let scroll_top = $(window).scrollTop();
@@ -38,21 +46,13 @@ $(document).ready(function () {
   // move on section in navbar When Click on it
   $(".mynavbar li a").click(function () {
     let id = $(this).attr("id");
-    $("html").animate({ scrollTop: $("." + id).offset().top -20 }, 10);
+    $("html").animate({ scrollTop: $("." + id).offset().top - 20 }, 10);
   });
 
   // Create limit number of input in footer on section in navbar When Click on it
   $("input").keyup(function (e) {
-     if (e.target.value.length >= 22)  e.target.value = e.target.value.substr(0, 22);
-    
+    if (e.target.value.length >= 22)
+      e.target.value = e.target.value.substr(0, 22);
   });
-
-  // Change active color in li When Click on it
-  // $(".mynavbar li").on(  "click" , function () {
-  //   $(this).addClass("active").siblings().removeClass("active")
-  // });
-
-
-
 });
 //  End Jquery
