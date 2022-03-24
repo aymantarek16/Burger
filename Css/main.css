@@ -6,50 +6,8 @@
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
-
-.content {
-  opacity: 0;
-  transition: opacity 1s;
-
-}
-
-/* Start Loading page */
-.loader {
-  height: 100vh;
-  width: 98.9vw;
-  background-color: #ddd;
-  position: absolute;
-  z-index: 999999999999;
-  opacity: 1;
-  transition: opacity 1s;
-}
-
-.loader > div {
-  height: 50px;
-  width: 50px;
-  border: 4px solid #333;
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  border-radius: 50%;
-  animation: loading 1s infinite linear;
-}
-
-@keyframes loading {
-  0%{
-    transform: scale(0.4);
-
-  }
-  100%{
-    transform: scale(1.1);
-
-  }
-
-}
-
-/* End Loading page */
 
 a {
   text-decoration: none !important;
@@ -75,13 +33,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#000),
-    to(gray)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(gray));
   background: linear-gradient(#000, gray);
   border-radius: 10px;
   height: 200px;
@@ -90,13 +42,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 html::-webkit-scrollbar-thumb:hover {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(gray),
-    to(#000)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(gray), to(#000));
   background: linear-gradient(gray, #000);
   border-radius: 10px;
 }
@@ -105,6 +51,59 @@ html::-webkit-scrollbar-track {
   background-color: #3d3d3d;
 }
 
+/* Start Loading page */
+.content {
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.loader {
+  height: 100vh;
+  width: 98.9vw;
+  background-color: #ddd;
+  position: absolute;
+  z-index: 999999999999;
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.loader > div {
+  height: 50px;
+  width: 50px;
+  border: 4px solid #333;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border-radius: 50%;
+  -webkit-animation: loading 1s infinite linear;
+          animation: loading 1s infinite linear;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+/* End Loading page */
 /* ScrollUp */
 .ScrollUp {
   position: fixed;
@@ -113,28 +112,10 @@ html::-webkit-scrollbar-track {
   right: 20px;
   border-radius: 50%;
   padding: 10px 15px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#020024),
-    color-stop(0%, #e00f41),
-    color-stop(35%, #79090b),
-    color-stop(76%, #c82bb6),
-    color-stop(96%, #ed0eb5),
-    to(#ff00b5)
-  );
-  background: linear-gradient(
-    90deg,
-    #020024 0%,
-    #e00f41 0%,
-    #79090b 35%,
-    #c82bb6 76%,
-    #ed0eb5 96%,
-    #ff00b5 100%
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, #e00f41), color-stop(35%, #79090b), color-stop(76%, #c82bb6), color-stop(96%, #ed0eb5), to(#ff00b5));
+  background: linear-gradient(90deg, #020024 0%, #e00f41 0%, #79090b 35%, #c82bb6 76%, #ed0eb5 96%, #ff00b5 100%);
   -webkit-box-shadow: 0 0 1px gray;
-  box-shadow: 0 0 1px gray;
+          box-shadow: 0 0 1px gray;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: none;
@@ -161,10 +142,10 @@ html::-webkit-scrollbar-track {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 10px;
   height: 350px;
   width: 55px;
@@ -173,7 +154,7 @@ html::-webkit-scrollbar-track {
   right: 15px;
   z-index: 999;
   -webkit-box-shadow: 1px 1px 8px gray;
-  box-shadow: 1px 1px 8px gray;
+          box-shadow: 1px 1px 8px gray;
   border: 1px solid #fff;
   background-color: #fff;
   border-radius: 5px;
@@ -309,7 +290,7 @@ html::-webkit-scrollbar-track {
   position: relative;
   top: -22px;
   -webkit-transform: translateX(75rem);
-  transform: translateX(75rem);
+          transform: translateX(75rem);
   color: #fff;
   cursor: pointer;
 }
@@ -347,11 +328,11 @@ html::-webkit-scrollbar-track {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .mynavbar .itsflex .Jevelin {
     top: 3px;
@@ -362,7 +343,7 @@ html::-webkit-scrollbar-track {
     margin-top: 5px;
     left: 0;
     -webkit-transform: translateX(0);
-    transform: translateX(0);
+            transform: translateX(0);
   }
   .mynavbar .itsflex button {
     margin-left: 20px;
@@ -396,13 +377,13 @@ html::-webkit-scrollbar-track {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .mynavbar .itsflex .Jevelin {
     top: 3px;
@@ -432,7 +413,7 @@ html::-webkit-scrollbar-track {
   background-color: #fff;
   top: -75px;
   -webkit-transform: translateY(70px);
-  transform: translateY(70px);
+          transform: translateY(70px);
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
@@ -644,26 +625,8 @@ html::-webkit-scrollbar-track {
   font-size: 12px;
   font-weight: bold;
   border-radius: 8px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#020024),
-    color-stop(0%, #e00f41),
-    color-stop(35%, #79090b),
-    color-stop(76%, #c82bb6),
-    color-stop(96%, #ed0eb5),
-    to(#ff00b5)
-  );
-  background: linear-gradient(
-    90deg,
-    #020024 0%,
-    #e00f41 0%,
-    #79090b 35%,
-    #c82bb6 76%,
-    #ed0eb5 96%,
-    #ff00b5 100%
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, #e00f41), color-stop(35%, #79090b), color-stop(76%, #c82bb6), color-stop(96%, #ed0eb5), to(#ff00b5));
+  background: linear-gradient(90deg, #020024 0%, #e00f41 0%, #79090b 35%, #c82bb6 76%, #ed0eb5 96%, #ff00b5 100%);
   color: #ffffff;
 }
 
@@ -744,11 +707,11 @@ html::-webkit-scrollbar-track {
   font-weight: 700;
   margin-bottom: 110px;
   -webkit-box-shadow: 10px 10px 10px -5px gray;
-  box-shadow: 10px 10px 10px -5px gray;
+          box-shadow: 10px 10px 10px -5px gray;
   width: 50%;
   padding: 10px 20px;
   -webkit-animation: letter 1.7s infinite;
-  animation: letter 1.7s infinite;
+          animation: letter 1.7s infinite;
 }
 
 .special .item .new {
@@ -760,26 +723,8 @@ html::-webkit-scrollbar-track {
   border-radius: 10px;
   color: #ffffff;
   font-weight: bold;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#020024),
-    color-stop(0%, #e00f41),
-    color-stop(35%, #79090b),
-    color-stop(76%, #c82bb6),
-    color-stop(96%, #ed0eb5),
-    to(#ff00b5)
-  );
-  background: linear-gradient(
-    90deg,
-    #020024 0%,
-    #e00f41 0%,
-    #79090b 35%,
-    #c82bb6 76%,
-    #ed0eb5 96%,
-    #ff00b5 100%
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, #e00f41), color-stop(35%, #79090b), color-stop(76%, #c82bb6), color-stop(96%, #ed0eb5), to(#ff00b5));
+  background: linear-gradient(90deg, #020024 0%, #e00f41 0%, #79090b 35%, #c82bb6 76%, #ed0eb5 96%, #ff00b5 100%);
 }
 
 .special .item img {
@@ -807,26 +752,8 @@ html::-webkit-scrollbar-track {
 }
 
 .special .item .btn_fat button:hover {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#020024),
-    color-stop(0%, #e00f41),
-    color-stop(35%, #79090b),
-    color-stop(76%, #c82bb6),
-    color-stop(96%, #ed0eb5),
-    to(#ff00b5)
-  );
-  background: linear-gradient(
-    90deg,
-    #020024 0%,
-    #e00f41 0%,
-    #79090b 35%,
-    #c82bb6 76%,
-    #ed0eb5 96%,
-    #ff00b5 100%
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, #e00f41), color-stop(35%, #79090b), color-stop(76%, #c82bb6), color-stop(96%, #ed0eb5), to(#ff00b5));
+  background: linear-gradient(90deg, #020024 0%, #e00f41 0%, #79090b 35%, #c82bb6 76%, #ed0eb5 96%, #ff00b5 100%);
   color: #fff;
   border: 2px solid transparent;
 }
@@ -845,8 +772,8 @@ html::-webkit-scrollbar-track {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .special .item .card_bottom span {
@@ -871,26 +798,8 @@ html::-webkit-scrollbar-track {
 }
 
 .special .item .card_bottom button:hover {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#020024),
-    color-stop(0%, #e00f41),
-    color-stop(35%, #79090b),
-    color-stop(76%, #c82bb6),
-    color-stop(96%, #ed0eb5),
-    to(#ff00b5)
-  );
-  background: linear-gradient(
-    90deg,
-    #020024 0%,
-    #e00f41 0%,
-    #79090b 35%,
-    #c82bb6 76%,
-    #ed0eb5 96%,
-    #ff00b5 100%
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, #e00f41), color-stop(35%, #79090b), color-stop(76%, #c82bb6), color-stop(96%, #ed0eb5), to(#ff00b5));
+  background: linear-gradient(90deg, #020024 0%, #e00f41 0%, #79090b 35%, #c82bb6 76%, #ed0eb5 96%, #ff00b5 100%);
 }
 
 .special .add {
@@ -925,26 +834,8 @@ html::-webkit-scrollbar-track {
   margin: 0 auto 20px auto;
   color: #ffffff;
   cursor: pointer;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#020024),
-    color-stop(0%, #e00f41),
-    color-stop(35%, #79090b),
-    color-stop(76%, #c82bb6),
-    color-stop(96%, #ed0eb5),
-    to(#ff00b5)
-  );
-  background: linear-gradient(
-    90deg,
-    #020024 0%,
-    #e00f41 0%,
-    #79090b 35%,
-    #c82bb6 76%,
-    #ed0eb5 96%,
-    #ff00b5 100%
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, #e00f41), color-stop(35%, #79090b), color-stop(76%, #c82bb6), color-stop(96%, #ed0eb5), to(#ff00b5));
+  background: linear-gradient(90deg, #020024 0%, #e00f41 0%, #79090b 35%, #c82bb6 76%, #ed0eb5 96%, #ff00b5 100%);
 }
 
 .special .add .icon {
@@ -1030,7 +921,7 @@ html::-webkit-scrollbar-track {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-    justify-content: space-around;
+        justify-content: space-around;
   }
 }
 
@@ -1060,8 +951,8 @@ html::-webkit-scrollbar-track {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 30px;
   }
   .special .item .btn_fat button {
@@ -1096,26 +987,8 @@ html::-webkit-scrollbar-track {
   font-size: 14px;
   font-weight: bold;
   border-radius: 5px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#020024),
-    color-stop(0%, #e00f41),
-    color-stop(35%, #79090b),
-    color-stop(76%, #c82bb6),
-    color-stop(96%, #ed0eb5),
-    to(#ff00b5)
-  );
-  background: linear-gradient(
-    90deg,
-    #020024 0%,
-    #e00f41 0%,
-    #79090b 35%,
-    #c82bb6 76%,
-    #ed0eb5 96%,
-    #ff00b5 100%
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, #e00f41), color-stop(35%, #79090b), color-stop(76%, #c82bb6), color-stop(96%, #ed0eb5), to(#ff00b5));
+  background: linear-gradient(90deg, #020024 0%, #e00f41 0%, #79090b 35%, #c82bb6 76%, #ed0eb5 96%, #ff00b5 100%);
   color: #ffffff;
 }
 
@@ -1137,26 +1010,8 @@ html::-webkit-scrollbar-track {
   border-radius: 50px;
   font-weight: bolder;
   font-family: "Jost", sans-serif;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#020024),
-    color-stop(0%, #e00f41),
-    color-stop(35%, #79090b),
-    color-stop(76%, #c82bb6),
-    color-stop(96%, #ed0eb5),
-    to(#ff00b5)
-  );
-  background: linear-gradient(
-    90deg,
-    #020024 0%,
-    #e00f41 0%,
-    #79090b 35%,
-    #c82bb6 76%,
-    #ed0eb5 96%,
-    #ff00b5 100%
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, #e00f41), color-stop(35%, #79090b), color-stop(76%, #c82bb6), color-stop(96%, #ed0eb5), to(#ff00b5));
+  background: linear-gradient(90deg, #020024 0%, #e00f41 0%, #79090b 35%, #c82bb6 76%, #ed0eb5 96%, #ff00b5 100%);
   border: 1px solid transparent;
   color: #fff;
   -webkit-transition: all 0.4s;
@@ -1233,26 +1088,8 @@ html::-webkit-scrollbar-track {
   font-size: 14px;
   font-weight: bold;
   border-radius: 5px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#020024),
-    color-stop(0%, #e00f41),
-    color-stop(35%, #79090b),
-    color-stop(76%, #c82bb6),
-    color-stop(96%, #ed0eb5),
-    to(#ff00b5)
-  );
-  background: linear-gradient(
-    90deg,
-    #020024 0%,
-    #e00f41 0%,
-    #79090b 35%,
-    #c82bb6 76%,
-    #ed0eb5 96%,
-    #ff00b5 100%
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, #e00f41), color-stop(35%, #79090b), color-stop(76%, #c82bb6), color-stop(96%, #ed0eb5), to(#ff00b5));
+  background: linear-gradient(90deg, #020024 0%, #e00f41 0%, #79090b 35%, #c82bb6 76%, #ed0eb5 96%, #ff00b5 100%);
   color: #ffffff;
 }
 
@@ -1275,26 +1112,8 @@ html::-webkit-scrollbar-track {
   border-radius: 50px;
   font-weight: bolder;
   font-family: "Jost", sans-serif;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#020024),
-    color-stop(0%, #e00f41),
-    color-stop(35%, #79090b),
-    color-stop(76%, #c82bb6),
-    color-stop(96%, #ed0eb5),
-    to(#ff00b5)
-  );
-  background: linear-gradient(
-    90deg,
-    #020024 0%,
-    #e00f41 0%,
-    #79090b 35%,
-    #c82bb6 76%,
-    #ed0eb5 96%,
-    #ff00b5 100%
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, #e00f41), color-stop(35%, #79090b), color-stop(76%, #c82bb6), color-stop(96%, #ed0eb5), to(#ff00b5));
+  background: linear-gradient(90deg, #020024 0%, #e00f41 0%, #79090b 35%, #c82bb6 76%, #ed0eb5 96%, #ff00b5 100%);
   border: 1px solid transparent;
   color: #fff;
   -webkit-transition: all 0.4s;
@@ -1367,7 +1186,7 @@ html::-webkit-scrollbar-track {
   font-weight: 700;
   margin-bottom: 110px;
   -webkit-box-shadow: 10px 10px 10px -5px gray;
-  box-shadow: 10px 10px 10px -5px gray;
+          box-shadow: 10px 10px 10px -5px gray;
   width: 50%;
   padding: 10px 20px;
   margin-left: 60px;
@@ -1404,8 +1223,8 @@ html::-webkit-scrollbar-track {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-bottom: 40px;
   padding: 0 20px;
 }
@@ -1418,26 +1237,8 @@ html::-webkit-scrollbar-track {
   position: relative;
   top: -7px;
   color: #ffffff;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#020024),
-    color-stop(0%, #e00f41),
-    color-stop(35%, #79090b),
-    color-stop(76%, #c82bb6),
-    color-stop(96%, #ed0eb5),
-    to(#ff00b5)
-  );
-  background: linear-gradient(
-    90deg,
-    #020024 0%,
-    #e00f41 0%,
-    #79090b 35%,
-    #c82bb6 76%,
-    #ed0eb5 96%,
-    #ff00b5 100%
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, #e00f41), color-stop(35%, #79090b), color-stop(76%, #c82bb6), color-stop(96%, #ed0eb5), to(#ff00b5));
+  background: linear-gradient(90deg, #020024 0%, #e00f41 0%, #79090b 35%, #c82bb6 76%, #ed0eb5 96%, #ff00b5 100%);
   background: #ff3939;
   font-weight: bold;
   font-family: "Jost", sans-serif;
@@ -1552,26 +1353,8 @@ html::-webkit-scrollbar-track {
   font-size: 12px;
   font-weight: bold;
   border-radius: 8px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#020024),
-    color-stop(0%, #e00f41),
-    color-stop(35%, #79090b),
-    color-stop(76%, #c82bb6),
-    color-stop(96%, #ed0eb5),
-    to(#ff00b5)
-  );
-  background: linear-gradient(
-    90deg,
-    #020024 0%,
-    #e00f41 0%,
-    #79090b 35%,
-    #c82bb6 76%,
-    #ed0eb5 96%,
-    #ff00b5 100%
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, #e00f41), color-stop(35%, #79090b), color-stop(76%, #c82bb6), color-stop(96%, #ed0eb5), to(#ff00b5));
+  background: linear-gradient(90deg, #020024 0%, #e00f41 0%, #79090b 35%, #c82bb6 76%, #ed0eb5 96%, #ff00b5 100%);
   color: #ffffff;
 }
 
@@ -1737,7 +1520,7 @@ footer .social_ul .social_li {
   height: 30px;
   margin-right: 35px;
   -webkit-transform: rotate(-30deg) skew(25deg);
-  transform: rotate(-30deg) skew(25deg);
+          transform: rotate(-30deg) skew(25deg);
   background: #ccc;
 }
 
@@ -1754,42 +1537,42 @@ footer .social_ul .social_li span {
   display: -ms-flexbox !important;
   display: flex !important;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
   font-size: 18px !important;
 }
 
 footer .social_ul .social_li:hover span:nth-child(1) {
   -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
+          transform: translate(0, 0);
   opacity: 0.2;
 }
 
 footer .social_ul .social_li:hover span:nth-child(2) {
   -webkit-transform: translate(10px, -10px);
-  transform: translate(10px, -10px);
+          transform: translate(10px, -10px);
   opacity: 0.4;
 }
 
 footer .social_ul .social_li:hover span:nth-child(3) {
   -webkit-transform: translate(20px, -20px);
-  transform: translate(20px, -20px);
+          transform: translate(20px, -20px);
   opacity: 0.6;
 }
 
 footer .social_ul .social_li:hover span:nth-child(4) {
   -webkit-transform: translate(30px, -30px);
-  transform: translate(30px, -30px);
+          transform: translate(30px, -30px);
   opacity: 0.8;
 }
 
 footer .social_ul .social_li:hover span:nth-child(5) {
   -webkit-transform: translate(40px, -40px);
-  transform: translate(40px, -40px);
+          transform: translate(40px, -40px);
   opacity: 1;
 }
 
@@ -1864,7 +1647,7 @@ footer .item input {
 
 footer .item input:focus {
   -webkit-box-shadow: 0 0 20px gray;
-  box-shadow: 0 0 20px gray;
+          box-shadow: 0 0 20px gray;
   border: none;
 }
 
@@ -1942,26 +1725,8 @@ footer .item h4 {
 
 /* Start Section 12 */
 .End {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#020024),
-    color-stop(0%, #e00f41),
-    color-stop(35%, #79090b),
-    color-stop(76%, #c82bb6),
-    color-stop(96%, #ed0eb5),
-    to(#ff00b5)
-  );
-  background: linear-gradient(
-    90deg,
-    #020024 0%,
-    #e00f41 0%,
-    #79090b 35%,
-    #c82bb6 76%,
-    #ed0eb5 96%,
-    #ff00b5 100%
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, #e00f41), color-stop(35%, #79090b), color-stop(76%, #c82bb6), color-stop(96%, #ed0eb5), to(#ff00b5));
+  background: linear-gradient(90deg, #020024 0%, #e00f41 0%, #79090b 35%, #c82bb6 76%, #ed0eb5 96%, #ff00b5 100%);
   padding: 15px 0;
 }
 
@@ -1970,7 +1735,7 @@ footer .item h4 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
 }
 
 .End .copyright span {
@@ -2006,14 +1771,14 @@ footer .item h4 {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .End .copyright span {
     margin-bottom: 10px;
@@ -2027,14 +1792,14 @@ footer .item h4 {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .End .copyright span {
     margin-bottom: 10px;
