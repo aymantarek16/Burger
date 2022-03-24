@@ -62,8 +62,8 @@ html::-webkit-scrollbar-track {
   height: 100vh;
   width: 98.9vw;
   background-color: #ddd;
-  position: absolute;
-  z-index: 999999999999;
+  position: fixed;
+  z-index: 99999;
   opacity: 1;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
@@ -238,8 +238,12 @@ html::-webkit-scrollbar-track {
 /* Start Style On NavBar */
 .mynavbar {
   background-color: transparent;
-  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 0 0 0 10px !important;
+  z-index: 9999999999;
 }
 
 .mynavbar .itsflex .Jevelin {
@@ -257,12 +261,12 @@ html::-webkit-scrollbar-track {
 
 .mynavbar .my_ul .nav_item a {
   margin: 0 30px;
+  padding: 10px 15px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .mynavbar .my_ul .nav_item a:hover {
-  padding: 10px 15px;
   border-radius: 20px;
   background-color: #ff3939;
   color: #fff;
@@ -312,7 +316,7 @@ html::-webkit-scrollbar-track {
   background-color: #fff;
 }
 
-@media (min-width: 770px) and (max-width: 1400px) {
+@media (min-width: 770px) and (max-width: 1199px) {
   .mynavbar .itsflex .aymanzero {
     font-size: 24px;
     left: 850px;
@@ -323,6 +327,10 @@ html::-webkit-scrollbar-track {
 }
 
 @media (max-width: 768px) {
+  .mynavbar {
+    background-color: #000;
+    padding: 10px 0 !important;
+  }
   .mynavbar .itsflex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -357,13 +365,6 @@ html::-webkit-scrollbar-track {
   .mynavbar .itsflex .aymanzero {
     left: -10px;
     top: 2px;
-  }
-}
-
-@media (max-width: 768px) {
-  .mynavbar {
-    background-color: #000;
-    padding: 10px 0 !important;
   }
 }
 
@@ -408,17 +409,22 @@ html::-webkit-scrollbar-track {
   }
 }
 
+@media (max-width: 350px) {
+  .navbar {
+    display: none;
+  }
+}
+
 /* Jqeury On NavBar */
 .mynavbar2 {
   background-color: #fff;
   top: -75px;
-  -webkit-transform: translateY(70px);
-          transform: translateY(70px);
+  -webkit-transform: translateY(75px);
+          transform: translateY(75px);
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
-  padding-left: 10px !important;
 }
 
 .mynavbar2 .Jevelin {
@@ -600,6 +606,14 @@ html::-webkit-scrollbar-track {
     top: 64%;
     left: 29%;
     padding: 10px 35px;
+  }
+}
+
+@media (max-width: 350px) {
+  .burger .img1,
+  .burger .img2,
+  .burger .img3 {
+    display: none;
   }
 }
 
@@ -1281,7 +1295,7 @@ html::-webkit-scrollbar-track {
 
 @media (max-width: 768px) {
   .Trending .col-lg-3 {
-    /* margin: 0 !important; */
+    margin: 0 !important;
     margin-left: 5px;
   }
   .Trending h2 {
