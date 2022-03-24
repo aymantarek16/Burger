@@ -10,15 +10,20 @@
 }
 
 .content {
-  display: none;
+  opacity: 0;
+  transition: opacity 1s;
+
 }
 
 /* Start Loading page */
 .loader {
   height: 100vh;
   width: 98.9vw;
-  background-color: transparent;
+  background-color: #ddd;
   position: absolute;
+  z-index: 999999999999;
+  opacity: 1;
+  transition: opacity 1s;
 }
 
 .loader > div {

@@ -3,19 +3,26 @@
 // // Change BG-NavBar On Scroll
 
 let mynavbar = document.querySelector(".mynavbar");
-let body = document.querySelector(".body");
 
 window.addEventListener("scroll", () => {
   mynavbar.classList.toggle("mynavbar2", scrollY > 0);
   
 });
 
+let loader = document.querySelector(".loader")
+let content = document.querySelector(".content")
+
+window.addEventListener("load" , ()=>{
+  loader.style.opacity = "0"
+  content.style.opacity = "1"
+})
+
 //  ==================================== Start Jquery ====================================
 // Loading Page Befor Load Main Page
-  $(window).on("load", function () {
-    $(".loader").fadeOut("2000");
-    $(".content").fadeIn("2000");
-  });
+  // $(window).on("load", function () {
+  //   $(".loader").fadeOut("2000");
+  //   $(".content").fadeIn("2000");
+  // });
 
 $(document).ready(function () {
   // Change Scroll Up On Scroll
