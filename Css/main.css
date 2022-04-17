@@ -399,8 +399,13 @@ html::-webkit-scrollbar-track {
     margin-left: 20px;
     padding: 5px 10px;
   }
+  .mynavbar .nav_item a {
+    margin: 0 20px;
+    padding: 0 !important;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
   .mynavbar .my_ul .nav_item {
-    margin-left: -25px;
     margin-top: 15px;
     font-size: 20px;
   }

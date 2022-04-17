@@ -297,8 +297,13 @@
       }
     }
 
+    .nav_item a {
+      margin: 0 20px;
+      padding: 0 !important;
+      transition: all 0.3s;
+    }
+
     .my_ul .nav_item {
-      margin-left: -25px;
       margin-top: 15px;
       font-size: 20px;
 
