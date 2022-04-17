@@ -157,26 +157,25 @@
     margin: 0 auto;
 
     .nav_item a {
-      margin: 0 30px;
-      padding: 10px 15px;
+      margin: 0 20px;
+      padding: 10px 15px !important;
       transition: all 0.3s;
 
       &:hover {
-        border-radius: 20px;
+        color: #fff !important;
         background-color: #ff3939;
-        color: #fff;
+        font-weight: bold;
+        border-radius: 20px;
       }
+
     }
 
-    .active a {
-      color: #ff3939 !important;
+    .active-link {
+      color: #fff !important;
+      background-color: #ff3939 !important;
 
-      &:hover {
-        padding: 10px;
-        border-radius: 20px;
-        background-color: #ff3939;
-        color: #fff !important;
-      }
+      font-weight: bold;
+      border-radius: 20px;
     }
 
     .nav_item .nav_link {

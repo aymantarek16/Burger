@@ -263,27 +263,24 @@ html::-webkit-scrollbar-track {
 }
 
 .mynavbar .my_ul .nav_item a {
-  margin: 0 30px;
-  padding: 10px 15px;
+  margin: 0 20px;
+  padding: 10px 15px !important;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .mynavbar .my_ul .nav_item a:hover {
-  border-radius: 20px;
-  background-color: #ff3939;
-  color: #fff;
-}
-
-.mynavbar .my_ul .active a {
-  color: #ff3939 !important;
-}
-
-.mynavbar .my_ul .active a:hover {
-  padding: 10px;
-  border-radius: 20px;
-  background-color: #ff3939;
   color: #fff !important;
+  background-color: #ff3939;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.mynavbar .my_ul .active-link {
+  color: #fff !important;
+  background-color: #ff3939 !important;
+  font-weight: bold;
+  border-radius: 20px;
 }
 
 .mynavbar .my_ul .nav_item .nav_link {
