@@ -155,7 +155,7 @@ html::-webkit-scrollbar-track {
   position: fixed;
   top: 35%;
   right: 15px;
-  z-index: 999;
+  z-index: 99999;
   -webkit-box-shadow: 1px 1px 8px gray;
           box-shadow: 1px 1px 8px gray;
   border: 1px solid #fff;
